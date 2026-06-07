@@ -6,7 +6,11 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
 import { useAuthStore } from '@/store/authStore';
-import { authApi } from '@/services/api';
+import { authApi, wakeUpBackend } from '@/services/api';
+
+/* Réveiller le serveur Render dès le chargement du module — avant même
+   le premier rendu — pour gagner un maximum de temps sur le "cold start". */
+wakeUpBackend();
 
 const queryClient = new QueryClient({
   defaultOptions: {
