@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "KAAY-MBAAY",
+    "slug": "kaay-mbaay",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F7FBFD"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.arokatech.kaaymbaay",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Prendre des photos de plantes pour le diagnostic IA",
+        "NSPhotoLibraryUsageDescription": "Accéder à vos photos pour le diagnostic IA",
+        "NSLocationWhenInUseUsageDescription": "Localiser votre position pour les zones agricoles proches"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1F4E36"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE"
+      ],
+      "package": "com.arokatech.kaaymbaay"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "backgroundColor": "#F7FBFD",
+          "imageWidth": 200
+        }
+      ],
+      "expo-font",
+      "expo-secure-store",
+      "expo-notifications"
+    ],
+    "scheme": "kaaymbaay",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
